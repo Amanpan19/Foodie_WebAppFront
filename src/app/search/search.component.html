@@ -1,0 +1,12 @@
+<p>search works!</p>
+<mat-form-field id="container" >
+    <div id="search" >
+        <input matInput  type="text" name="searchquery" id="searchquery" [(ngModel)]="searchText"
+        placeholder="Search" (click)="searchLocation()">
+        <!-- <button  (click)="searchNote()"> -->
+        <button mat-button (click)="searchLocation()" >
+       <mat-icon id="icon1"  aria-hidden="false" aria-label="Example search icon" fontIcon="search" (click)="searchLocation()"></mat-icon>
+        <!-- </button> -->
+    </button>
+    </div>
+</mat-form-field>

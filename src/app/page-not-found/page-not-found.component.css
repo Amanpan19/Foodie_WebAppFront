@@ -1,0 +1,58 @@
+
+img{
+    width: 80%;
+    height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.pageNotFound{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    height: 100%;
+}
+
+button{
+    height: 40px;
+    border-radius: 7px;
+    background-color: rgb(165, 90, 236);
+    outline: none;
+    margin-top:-7%;
+}
+
+button:hover{
+    background-color: rgb(181, 46, 248);
+}
+
+a{
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width:797px) {
+    img{
+        width: 80%;
+        height: 80vh;
+    }
+    #imgBtn{
+        position: absolute;
+        top: 14%;
+        left: 5%;
+    }
+   
+    .pageNotFound{
+        background-color: rgb(255, 196, 0);
+        width: 100%;
+    }
+}
+@media (max-width:527px) {
+    img{
+        width: 100%;
+    }
+    .pageNotFound{
+      width: 100%;
+    }
+}

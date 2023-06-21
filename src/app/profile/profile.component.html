@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div id="mainCont">
+
+   
+        <div id="card">
+           <div id="imgCont">
+               <!-- <a routerLink="/update"><i class="fa fa-edit" id="edit"></i></a> -->
+                <img [src]="userImg" alt="Profile Image">
+           </div>
+        
+           <div class="info">
+                <h1 style="text-align: center;">Profile</h1>
+               <div class="userData">
+                   <div class="info1">
+                        <p>Name: {{userInfo?.name}}</p>
+                        <p>Email: {{userInfo?.email}}</p>
+                   </div>
+                   <div class="info2">
+                        <p id="phone">PhoneNo &nbsp;<i class="fa fa-phone"></i>&nbsp;: {{userInfo?.phoneNo}}</p>
+                   </div>
+                </div>
+
+                <div class="vertical"></div>
+
+                <div *ngIf="visible">
+                <div id="links" style="font-weight: 600;letter-spacing:1px;">
+                        <a routerLink="/myOrders">Your Orders</a>
+                        <a routerLink="/fav">Favourites</a>
+                </div>
+               </div>
+               <div *ngIf="!visible">
+                    <div id="links" style="font-weight: 600;letter-spacing:1px;">
+                            <a routerLink="/admin">Back to Main Menu</a>
+                    </div>
+                   </div>
+           </div>
+           <a id="editIcon"><i class="fa fa-edit" id="edit" (click)="updateUser()"></i></a>
+        </div>
+</div>
+
+<router-outlet></router-outlet>

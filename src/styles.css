@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body::-webkit-scrollbar{width: 8px;z-index: -10;}
+body::-webkit-scrollbar-track{background: rgb(252, 251, 251);}
+body::-webkit-scrollbar-thumb{background-color:rgb(18, 17, 17);}

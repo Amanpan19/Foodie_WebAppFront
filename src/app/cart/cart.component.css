@@ -1,0 +1,9 @@
+.gradient-custom {
+    background: linear-gradient(to right, #343232, rgb(255, 255, 255));
+    height: auto;
+    /* background-image: image-set("https://burst.shopifycdn.com/photos/games-and-pizza.jpg?width=373&format=pjpg&exif=1&iptc=1"); */
+    }
+
+section{
+    margin-top: 70px;
+}

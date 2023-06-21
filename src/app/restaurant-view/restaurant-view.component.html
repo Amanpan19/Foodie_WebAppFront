@@ -1,0 +1,64 @@
+<!-- <app-search (searchButtonClicked)="getLocation($event)"></app-search> -->
+
+<div id="bgImg" >
+    
+    <h1 style="text-align: center;">Have a delicious food at available restaurants !!</h1>
+    <div style="float: right;margin-top: -20px;"></div>
+
+   
+        <div class="cardCont"*ngIf="present == false">
+            <div *ngIf="isLoading" id="loading"></div>
+            <div class="card" *ngFor="let restaurant of restaurants" (click)="getItems(restaurant.restaurantId)">
+                <img src="{{restaurant.imageUrl}}" alt="">
+                <span>{{restaurant.restaurantName}}</span>
+                <p>Location: {{restaurant.location}}</p>
+
+                <div class="github-star-badge">
+                    Rating: {{restaurant.rating}}
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- for restraunts -->
+
+        <div class="cardCont" *ngIf="present == true">
+            <div *ngIf="isLoading" id="loading"></div>
+            <div class="card" *ngFor="let restaurant of searchedRestaurants" (click)="getItems(restaurant.restaurantId)">
+                <img src="{{restaurant.imageUrl}}" alt="">
+                <span>{{restaurant.restaurantName}}</span>
+                <p>Location: {{restaurant.location}}</p>
+
+                <div class="github-star-badge">
+                    Rating: {{restaurant.rating}}
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- for items -->
+
+        <div *ngIf="present == true">
+            <h1 style="text-align: center;">Items You are Looking for</h1>
+            <div class="cardCont" >
+            <div *ngIf="isLoading" id="loading"></div>
+            <div class="card2" *ngFor="let item of searchedItems">
+                <img src="{{item.imageUrl}}" alt="{{item.itemName}}">
+                <!-- <mat-icon mat-raised-button="accent" style="margin-left: 10px;"[color]="restaurant.isClicked? 'warn' : 'primary'" 
+            (click)="addToFavourites(restaurant);" >favorite_border</mat-icon> -->
+                <span>{{item.itemName}}</span>
+                <p style="margin-left: 10px;">Price:<i class="fa fa-rupee"></i> {{item.itemPrice}}</p>
+
+                <div class="github-star-badge" style="margin-right:-30px;margin-top:26px;">
+                    Rating: {{item.itemRating}}
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="addToCart">
+                <button mat-raised-button color="primary" (click)="addToCart(item)">Add to Cart</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    
+
+</div>

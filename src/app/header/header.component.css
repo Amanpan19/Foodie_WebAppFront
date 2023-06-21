@@ -1,0 +1,271 @@
+@import"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+#imgCont{
+    width:auto;
+}
+#userImg{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    
+}
+
+/* nav{
+    
+    
+} */
+nav.sticky{
+    background:linear-gradient(to right,rgb(240, 215, 56),rgb(240, 105, 56)) ;
+    box-shadow:-20px 1px 100px -22px black;
+    transition: ease 0.7s;
+}
+label #btn,label #cancel{
+    color: white;
+    float: right;
+    display: none;
+}
+#check{
+    display: none;
+}
+#logo{
+    width: 14%;
+    height:80px;
+    cursor: pointer;
+}
+
+#searchBar{
+    background-color:white;color: #040000;height: 45px;
+    width: 38%; outline: none;
+    border:2px solid orange; border-radius: 5px;
+    padding: 0 50px 0 20px;font-size: 15px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    margin-left:5%;
+  }
+
+
+ul{
+    float: right;
+    list-style: none;
+    margin-top: 15px;
+    margin-right:0;
+    position: relative;
+  }
+  ul li{
+    display: inline-block;
+    margin: 0 12px;
+  }
+
+ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav.sticky ul li a{
+    color: white;
+}
+
+#Uname{
+    color:white;
+    background-color:rgb(244, 192, 73);
+    padding: 4px 8px;
+    border-radius:30px;
+    
+}
+nav.sticky #Uname{
+    color:Black;
+    background-color: white;
+}
+
+nav ul #userList{
+    position: absolute;
+    display: block;
+    text-align: center;
+    top:63px;
+    background-color: #fff;
+    transition: ease .3s;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+    /* opacity:0;
+    visibility: hidden; */
+}
+
+/* nav ul li:hover > #userList{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+} */
+#userList li{
+    position: relative;
+    float: none;
+    display: list-item;
+    padding: 10px;
+    margin-left:-20px;
+    border-bottom: 1px solid black;
+}
+
+#userList li a{
+    color: black;
+}
+
+button,mat-sidenav{
+    display: none;
+}
+
+
+#start{
+    background-color: white;
+    color: black;
+    padding:10px 20px;
+    border-radius: 10px;
+}
+
+@media (max-width:1070px) {
+    #logo{
+        width: 20%;
+        height:60px;
+    }
+    #searchBar{
+        position: absolute;
+        top:110%;
+        right:10%;
+        width: 80%;
+        background-color: #323232;
+        color: white;
+        border: 2px solid orange;
+      }
+      ul{
+       margin-left:35%;
+      }
+      #userList{
+        margin-left: 0;
+      }
+}
+
+@media (max-width:1020px) {
+ 
+    #logo{
+        width: 30%;
+        height:60px;
+    }
+    #Uname{
+        border:2px solid black;
+    }
+    ul{
+        margin-left: 0;
+    }
+    
+}
+@media (max-width:703px) {
+    nav{
+        height: 70px;
+        background:linear-gradient(to right,rgb(244, 206, 57),rgb(244, 206, 57)) ;
+    }
+    #searchBar{
+        position: absolute;
+        top:20%;
+        left:32%;
+        width: 50%;
+      }
+     
+    #logo{
+        width: 35%;
+        height:45px;
+    }
+    ul{
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        top: 7.8%;
+        text-align: center;
+        background-color: rgba(175, 116, 243, 0.984);
+        transition: ease-in 0.4s;
+        z-index: -100;
+    }
+    #Uname{
+        border-radius: 0;
+    }
+    ul li a{
+        color: white;
+    }
+    
+    label #btn{
+        display: block;
+        
+    }
+    /* nav.sticky label #btn{
+        color: white;
+    } */
+    .checkbtn{
+        display: block;
+        position: relative;
+        right: 3%;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    #imgCont{
+        margin: auto;
+    }
+    ul img{
+        margin-left: 0;
+        width: 60px;
+        height: 60px;
+    }
+    
+    #check:checked ~ ul{
+        left:-50%;
+        z-index: 20;
+    }
+    label+ul li{
+       position: relative;
+        display: block;
+        margin: 50px 0 0 46%;
+    }
+    #userList{
+        float: none;
+        width:60%;
+        height:auto;
+        border: 1px solid black;
+        margin-top:-10px;
+        left: 20%;
+    }
+
+    #userList li{
+        display: block;
+        margin:5px 0 0 -20px;
+        width: 100%;
+    }
+    
+
+    #check:checked ~ label #btn{
+        display: none;
+    }
+    #check:checked ~ label #cancel{
+        display:block;
+    }
+
+    #check:checked #userlist{
+        left:-80%;
+    }
+}
+
+@media (max-width:396px) {
+    nav ul li{
+        margin-right:4px;
+    }
+    #userList{
+        float: none;
+        width:100%;
+        height:auto;
+        border: 1px solid black;
+        margin-top:-10px;
+        left:0%;
+    }
+}

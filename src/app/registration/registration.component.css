@@ -1,0 +1,118 @@
+#registration{
+
+    width:100%;
+    height: 100vh;
+    margin: auto;
+    background-color:rgb(251, 250, 248);
+    background-image: url(../../assets/signUp2.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    position: relative;
+}
+h2{
+    color: white;
+    font-family: cursive;
+    font-size: 27px;
+    margin-bottom:15px;
+}
+#formBx{
+    background:linear-gradient(to right,rgb(134, 15, 237),rgb(200, 25, 244));
+    padding: 2%;
+    border-radius:6%;
+    margin-top: 3.3%;
+    box-shadow:10px 10px 190px -50px;
+    float: right;
+    position: relative;
+    top: 3%; right: 8%;
+    width:460px;
+    scale: 0.8;
+ }
+
+form{
+    width:400px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    border-radius:30px;
+    width: 95%;
+    padding: 15px 12px;
+    outline: none;
+    margin-bottom:6px;
+    font-size: 18px;
+}
+span{
+    color: white;
+    font-size: 17px;
+}
+
+ #err{
+    margin-bottom: 10px;
+    color: rgb(242, 249, 47);
+ }
+
+ #passwordInp,#confirmPasswordInp,#emailInp,#nameInp{
+    margin-bottom: 10px;
+ }
+ button{
+    margin-top: -50px;
+ }
+
+ #clear{
+    
+    background-color: rgb(255, 0, 132);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+ }
+ #clear:hover{
+    background-color: rgb(155, 2, 68);
+ }
+ #clear a{
+    line-height: 60px;
+    color: white;
+    padding: 10px;
+ }
+ #userInp{
+    border: 1px solid black;
+    margin-bottom: 20px;
+    border-radius: 15px;
+ }
+
+
+ @media (max-width:395px) {
+    #clear{
+        left: -20px;
+        top: 88vh;
+        background-color: white;
+        transition: 0.7s;
+    }
+    #clear a{
+        color: black;
+    }
+    #clear a:hover{
+        color: white;
+    }
+ }
+
+ @media (max-width:526px) {
+    #registration{
+        background-color: rgb(253, 40, 136);
+    }
+    form{
+        margin: auto;
+        width:90%;
+    }
+    #formBx{
+        width:90%;
+        border-radius: 3%;
+        
+     }
+ }

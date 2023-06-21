@@ -1,0 +1,52 @@
+<div class="navMain">
+  <nav class="navbar navbar-expand-lg bg-light fixed-top" id="navbar">
+     <img src="../../assets/logo_Foodie.png" alt="" id="logo" (click)="moveToHome()">
+     <input id="searchBar" type="text" placeholder="Search Restaruant and cuisine here..."
+     #searchInput (keyup.enter)="onSearchTextChanged(searchInput.value)" (input)="onSearchTextChanged(searchInput.value)">
+     <input type="checkbox" id="check">
+     <label for="check" class="checkbtn">
+     <i class="fa fa-bars" id="btn"></i>
+     <i class="fa fa-times" id="cancel"></i>
+     </label>
+     <ul>
+        <li><a routerLink="/about" id="start">About us</a></li>
+        <!-- <li *ngIf="!adminLoggedIn"><a routerLink="/kasn">Contact</a></li> -->
+        <li *ngIf="adminLoggedIn">
+           <a routerLink="/cart">
+              <div class="demo-section">
+                 <mat-icon matBadge={{cartCount}} matBadgeColor="accent"  *ngIf="cartCount>0"><i class="fa fa-shopping-cart"> </i></mat-icon>
+                 <mat-icon *ngIf="cartCount==0"><i class="fa fa-shopping-cart"> </i></mat-icon>
+                 <!-- Include text description of the icon's meaning for screen-readers -->
+                 <span class="cdk-visually-hidden">
+                 </span>
+              </div>
+           </a>
+        </li>
+        <li *ngIf="flag"><a routerLink="/registration">SignUp</a></li>
+        <li><a routerLink="/login"(click)="clicked()">{{type}}</a></li>
+        <!-- After login user image and name will be shown-->
+        <li *ngIf="flag1" (click)="clickedList()">
+        <div id ="imgCont">
+           <div id="Uname" style="cursor: pointer;">
+              <img id="userImg" [src]="imageSrc" alt="user" *ngIf="flag1">
+              {{userInfo?.name}}<i class="fa fa-angle-down" style="font-size:18px;margin-left: 8px;margin-top:12px;"></i>
+           </div>
+        </div>
+        <!-- For User -->
+        <ul id="userList" [hidden]="!isVisible" *ngIf="adminLoggedIn">
+              <!-- <ul id="userList"> -->
+              <li><a routerLink="/profile">Profile</a></li>
+              <li><a routerLink="/fav">Favourite</a></li>
+              <li><a routerLink="/myOrders">Orders</a></li>
+        </ul>
+        <!-- For admin -->
+        <ul id="userList" [hidden]="!isVisible" *ngIf="!adminLoggedIn">
+              <li><a routerLink="/profile">Profile</a></li>
+              <li><a routerLink="/adminRestaurantView">Add Restaruant</a></li>
+              <li><a routerLink="/adminFoodItem">Add Items</a></li>
+        </ul>
+     </li>
+     </ul>
+  </nav>
+</div>
+<router-outlet></router-outlet>

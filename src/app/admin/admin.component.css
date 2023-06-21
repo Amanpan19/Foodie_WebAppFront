@@ -1,0 +1,149 @@
+li
+{
+    list-style: none;
+}
+
+.box {
+    /* background-color: black; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  p {
+    font-size: 17px;
+    align-items: center;
+  }
+  .box a {
+    display: inline-block;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 3px;
+  }
+  .modal {
+    align-items: center;
+    display: flex;
+    justify-content: center; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(254, 126, 126, 0.7);
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .content {
+    position: absolute;
+    background: white;
+    width: 400px;
+    padding: 1em 2em;
+    border-radius: 4px;
+  } 
+  .modal:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .box-close {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: #fe0606;
+    text-decoration: none;
+    font-size: 30px;
+  }
+
+  .tester{
+    background: lightcoral;
+    width: 58rem;
+    height: 30rem;
+
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 5rem;
+  }
+
+  h1{
+   position: absolute;
+   left: 45%;
+   top: 23%;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 600;
+  }
+
+  .shape{
+    border: 3px solid rgb(14, 0, 0);
+    border-radius: 10px 70px;
+    box-shadow:1px 1px 20px rgba(14, 0, 0, 0.219);
+    background-color: rgb(252, 242, 228);
+    margin: auto;
+    width: 450px;
+    height: 180px;
+    margin-top: 250px;
+    position: relative;
+}
+hr {
+  margin: 0px 10px;
+  color: inherit;
+  border: 0;
+  border-top: var(--bs-border-width) solid;
+  opacity: .25;
+}
+
+#addRes{
+  margin: 25px ;
+}
+
+#addItem{
+  position: absolute;
+  right: 20px;
+  top:110px
+}
+  .background{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(../../assets/loginBg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* shape9 { border-radius: 10px 20px; } */
+  /* https://thumbs.dreamstime.com/b/admin-message-working-office-table-background-93379017.jpg */
+  /* https://t3.ftcdn.net/jpg/01/57/34/62/360_F_157346244_A6Oml9kXsQdK3WaVVg91UnzheU0YeFpe.jpg */
+  /* https://media.istockphoto.com/id/1364223865/photo/close-up-an-accountant-working-about-financial-with-calculator-at-his-office-to-calculate.jpg?b=1&s=170667a&w=0&k=20&c=MeuUWwih0sHsE1XtOMjm5xim44bdupfB7VUnXJPlgv8= */
+
+  @media (max-width:463px) {
+  
+    h1{
+      left:33%;
+    }
+
+    .shape{
+   
+      border-radius: 10px 30px;
+      width: 280px;
+      height: 180px;
+     
+  }
+  hr {
+    margin: 0px 10px;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    opacity: .25;
+  }
+  
+  #addRes{
+    margin: 25px 13% ;
+  }
+  
+  #addItem{
+    position: absolute;
+    right: 20px;
+    top:110px
+  }
+    
+  }

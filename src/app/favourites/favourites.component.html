@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div id="fav">
+   <section>
+    <h1>Favourites</h1>
+ 
+ <div id="main">
+    <div *ngIf="isLoading" id="loading"></div>
+    <div id="mainCardCont" *ngIf="dataPresent">
+       <div class="card" *ngFor="let list of favList">
+          <img src="{{list.imageUrl}}" alt="">
+          <div class="cardContent">
+             <span>{{list.itemName}}</span>
+             <p id="rating">{{list.itemRating}}<i class="fa fa-star"></i></p>
+             <p id="price">Price: <i class="fa fa-rupee"></i>{{list.itemPrice}}</p>
+             <div id="order">
+                <button mat-raised-button color="primary" (click)="addToCart(list)">Add to Cart</button>
+             </div>
+             <div id="icon" (click)="removeItem(list.itemId)">
+                <i class="fa fa-trash-o"></i>
+             </div>
+          </div>
+       </div>
+    </div>
+    <div *ngIf="!dataPresent" id="emptyList">
+      <img src="../../assets/empty.svg" alt="" id="notPresent">
+   </div>
+ </div>
+</section>
+</div>
